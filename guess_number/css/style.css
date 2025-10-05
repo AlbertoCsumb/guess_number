@@ -1,0 +1,134 @@
+/* Alberto Rodriguez
+10-5-2025
+Guess the Number Game
+ */
+
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  font-family: Arial, sans-serif;
+  color: #0f172a;
+  background-image: url('../img/backgroundForHw.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  display: grid;
+  place-items: start center;
+}
+
+header {
+  width: min(680px, 92vw);
+  text-align: center;
+  margin-top: 6vh;
+  padding: 20px;
+  background: rgba(255,255,255,0.85);
+  border-radius: 14px;
+  border: 1px solid rgba(15,23,42,0.1);
+  box-shadow: 0 10px 24px rgba(2,6,23,0.15);
+}
+
+h1 {
+  margin: 0 0 6px;
+  font-size: clamp(26px, 5vw, 40px);
+  letter-spacing: 0.2px;
+}
+
+h2 {
+  margin: 0;
+  font-weight: 500;
+  font-size: clamp(14px, 2.5vw, 18px);
+  color: #334155;
+}
+
+#attemptCounter {
+  width: min(680px, 92vw);
+  margin-top: 14px;
+  padding: 10px 14px;
+  background: rgba(207, 10, 10, 0.5);
+  color: #ffffff;
+  border-left: 4px solid #ffffff;
+  border-radius: 10px;
+}
+
+#main {
+  width: min(680px, 92vw);
+  padding: 18px;
+  margin-top: 12px;
+  background: rgba(255,255,255,0.85);
+  border-radius: 14px;
+  border: 1px solid rgba(15,23,42,0.1);
+  box-shadow: 0 10px 24px rgba(2,6,23,0.15);
+}
+
+label { display: inline-block; margin-right: 6px; }
+
+#playerGuess {
+  width: 120px;
+  padding: 10px 12px;
+  margin: 10px 8px 10px 0;
+  border: 1px solid #94a3b8;
+  border-radius: 10px;
+  outline: none;
+  font-size: 18px;
+  transition: border-color 150ms, box-shadow 150ms;
+}
+
+#playerGuess:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.2);
+}
+
+button {
+  padding: 10px 16px;
+  margin: 10px 8px 10px 0;
+  border: none;
+  border-radius: 999px;
+  background: #2563eb;
+  color: #fff;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 120ms, background-color 120ms, opacity 120ms;
+}
+
+button:hover { transform: translateY(-1px); opacity: 0.95; }
+button:active { transform: translateY(0); }
+
+#resetBtn { background: #475569; }
+#resetBtn:hover { background: #334155; }
+
+#feedback {
+  min-height: 22px;
+  margin-top: 6px;
+  font-weight: 700;
+}
+
+#guesses {
+  display: inline-block;
+  margin-top: 6px;
+  padding: 4px 8px;
+  border-radius: 8px;
+  background: rgba(15, 23, 42, 0.06);
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+}
+
+#score h3 {
+  width: min(680px, 92vw);
+  margin: 14px 0 0;
+  padding: 12px 14px;
+  background: rgba(255,255,255,0.85);
+  border-radius: 12px;
+  border: 1px solid rgba(15,23,42,0.1);
+  display: flex;
+  gap: 14px;
+  justify-content: center;
+}
+
+#wins, #losses { padding: 0 6px; }

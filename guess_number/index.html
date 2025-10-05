@@ -1,0 +1,45 @@
+<!-- Alberto Rodriguez
+10-5-2025
+Guess the Number Game -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Guess a Number</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="./css/style.css" />
+</head>
+<body>
+  <header>
+    <h1>Guess the Number!</h1>
+    <h2>Guess a number between 1 and 99 in seven attempts!</h2>
+  </header>
+
+  <div id="attemptCounter">Attempt: 1 of 7</div>
+
+  <div id="main">
+    <label for="playerGuess">Enter a guess:</label>
+    <input type="number" id="playerGuess" size="5" min="1" max="99" inputmode="numeric" />
+    <button id="guessBtn">Guess</button>
+    <button id="resetBtn">Reset</button>
+
+    <div id="feedback"></div>
+
+    <div>
+      Previous Guesses:
+      <span id="guesses"></span>
+    </div>
+  </div>
+
+  <div id="score">
+    <h3>
+      <span id="wins">Wins: 0</span>
+      <span id="losses">Losses: 0</span>
+    </h3>
+  </div>
+
+  <script src="./js/script.js"></script>
+</body>
+</html>
